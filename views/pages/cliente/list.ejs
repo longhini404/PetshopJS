@@ -1,0 +1,28 @@
+<%- contentFor('body') %>
+<h1>Clientes</h1>
+
+<div class="row">
+    <div class="col-xs-1-12 p-2">
+        <a href="/cliente/new">
+            <button type="button" class="btn btn-primary">Novo</button>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+
+    <% for (cliente of clientes){%>
+
+    <div class="col-xs-1-12 p-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><%= cliente.nome %> <%= cliente.sobrenome %></h5>
+                <p class="card-text">E-mail: <%= cliente.email %></p>
+                <a href="/cliente/edit/<%= cliente.id %>" class="btn btn-primary">Editar</a>
+                <a href="/cliente/delete/<%= cliente.id %>" class="btn btn-secondary">Remover</a>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+</div>
