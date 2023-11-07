@@ -3,7 +3,7 @@
 - $ yarn sequelize db:create
 - $ yarn sequelize db:migrate
 
-# Deploy
+# Setup & Localhost
 
 - $ yarn install
 
